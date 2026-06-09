@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <FadeIn y={-20} delay={0}>
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-[26px] bg-[#0C0C0C]/80 backdrop-blur-md border-b border-white/5">
-        <span className="text-[31px] font-black hero-heading">Aashritha</span>
+        <span className="text-[29px] font-black hero-heading">Aashritha</span>
         <ul className="hidden md:flex items-center gap-6">
           {links.map((link) => {
             const isActive = active === link
@@ -41,7 +41,7 @@ export default function Navbar() {
               <li key={link}>
                 <a
                   href={`#${sectionIds[link]}`}
-                  className="relative text-[19px] font-medium text-[#D7E2EA]/70 hover:text-[#D7E2EA] transition-colors pb-1"
+                  className="relative text-[16px] font-medium text-[#D7E2EA]/70 hover:text-[#D7E2EA] transition-colors pb-1"
                 >
                   {link}
                   {isActive && (
