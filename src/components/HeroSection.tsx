@@ -9,12 +9,12 @@ const PORTRAIT_URL = 'https://i.postimg.cc/cLbNVKqP/Whats-App-Image-2025-11-06-a
 export default function HeroSection() {
   return (
     <section id="hero" className="relative min-h-screen flex flex-col justify-center px-6 md:px-16 pt-24 pb-16 bg-[#0C0C0C]">
-      <div className="relative z-10 max-w-[55%] sm:max-w-[60%]">
+      <div className="relative z-10 max-w-[70%]">
         <FadeIn delay={0.1} y={40}>
-          <div style={{ width: '100%', overflow: 'hidden' }}>
+          <div>
             <h1
               className="hero-heading font-black uppercase tracking-tight leading-none mt-0 sm:mt-0 md:-mt-6"
-              style={{ fontSize: 'clamp(4rem, 12vw, 9.5rem)', wordBreak: 'keep-all', whiteSpace: 'nowrap' }}
+              style={{ fontSize: 'clamp(4rem, 10vw, 9.5rem)', wordBreak: 'keep-all', whiteSpace: 'nowrap' }}
             >
               Hi, i&apos;m Aashritha
                <br />
