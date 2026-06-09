@@ -55,7 +55,9 @@ export default function Navbar() {
             )
           })}
         </ul>
-        <DownloadCVButton />
+        <div className="flex justify-end">
+         <DownloadCVButton />
+        </div>
       </nav>
     </FadeIn>
   )
