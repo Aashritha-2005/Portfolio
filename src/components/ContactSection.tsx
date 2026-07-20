@@ -113,9 +113,9 @@ export default function ContactSection() {
               <div className="bg-[#111827] border border-[#1e2a3a] rounded-2xl p-5">
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                  <span className="text-sm font-semibold text-[#D7E2EA]">Available for hire</span>
+                  <span className="text-sm font-semibold text-[#D7E2EA]">Available for full-time opportunities</span>
                 </div>
-                <p className="text-xs text-[#6b7280]">Open to internships, research roles, and freelance projects.</p>
+                <p className="text-xs text-[#6b7280]">Open to Software Engineering, ML Engineering, and Applied AI roles.</p>
               </div>
             </div>
           </FadeIn>
