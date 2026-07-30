@@ -11,6 +11,22 @@ const GAP = 24
 
 const baseCerts = [
   {
+    title: 'CS50x: Introduction to Computer Science',
+    issuer: 'Harvard University',
+    category: 'Certification',
+    description:
+      'Completed Harvard\'s flagship CS course including ten problem sets and one final project, covering algorithms, data structures, C, Python, SQL, and web development.',
+    link: 'https://cs50.harvard.edu/certificates/815b5999-9e9f-4c00-8a97-dbfd5353122a',
+  },
+  {
+    title: 'The Hangover Hackathon — Part AI: Where\'s My Context?',
+    issuer: 'WeMakeDevs × Cognee',
+    category: 'Hackathon',
+    description:
+      'Participated in a 7-day online hackathon on AI context and memory (June 29 – July 5, 2026), sponsored by Cognee and presented by WeMakeDevs.',
+    link: null,
+  },
+  {
     title: 'Summer of AI Internship',
     issuer: 'VISWAM.AI & Swecha',
     category: 'Internship',
@@ -26,7 +42,7 @@ const baseCerts = [
   },
   {
     title: 'Machine Learning Foundations (Python & scikit-learn)',
-    issuer: 'Model training, validation, and evaluation',
+    issuer: 'Coursera',
     category: 'Certification',
     description:
       'Model training, validation, and evaluation using Python and scikit-learn, including classical ML algorithms, cross-validation, and performance metrics.',
@@ -114,7 +130,7 @@ export default function CertificationsSection() {
             {[...Array(5)].map((_, i) => (
               <Star key={i} size={20} fill="#1a4fd6" stroke="#1a4fd6" />
             ))}
-            <span className="text-sm font-medium text-gray-500 ml-1">Verified · 3 credentials</span>
+            <span className="text-sm font-medium text-gray-500 ml-1">Verified · 5 credentials</span>
           </div>
         </FadeIn>
       </div>
@@ -184,15 +200,21 @@ export default function CertificationsSection() {
 
               {/* Row 5 — button */}
               <div className="mt-auto pt-4">
-                <a
-                  href={cert.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-white text-sm font-semibold uppercase tracking-widest transition-opacity hover:opacity-90"
-                  style={{ background: btnGradient, boxShadow: btnShadow }}
-                >
-                  ↗ View Certificate
-                </a>
+                {cert.link ? (
+                  <a
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-white text-sm font-semibold uppercase tracking-widest transition-opacity hover:opacity-90"
+                    style={{ background: btnGradient, boxShadow: btnShadow }}
+                  >
+                    ↗ View Certificate
+                  </a>
+                ) : (
+                  <span className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold uppercase tracking-widest border border-gray-200 text-gray-400 cursor-default">
+                    Certificate Issued
+                  </span>
+                )}
               </div>
             </div>
           ))}
