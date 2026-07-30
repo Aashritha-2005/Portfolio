@@ -25,10 +25,10 @@ export default function HeroSection() {
 
         <FadeIn delay={0.4} y={20}>
           <div className="flex flex-wrap gap-3 mt-6">
-            <span className="px-4 py-1.5 rounded-full text-sm font-medium border border-[#D7E2EA]/30 text-[#D7E2EA]/80">AI/ML Developer</span>
-            <span className="px-4 py-1.5 rounded-full text-sm font-medium border border-[#D7E2EA]/30 text-[#D7E2EA]/80">Data Scientist</span>
-            <span className="px-4 py-1.5 rounded-full text-sm font-medium border border-[#D7E2EA]/30 text-[#D7E2EA]/80">Software Developer</span>
-            <span className="px-4 py-1.5 rounded-full text-sm font-medium bg-cyan-500/20 border border-cyan-400/40 text-cyan-300">Research Enthusiast</span>
+            <span className="px-5 py-2 rounded-full text-base font-medium border border-[#D7E2EA]/30 text-[#D7E2EA]/80">AI/ML Developer</span>
+            <span className="px-5 py-2 rounded-full text-base font-medium border border-[#D7E2EA]/30 text-[#D7E2EA]/80">Data Scientist</span>
+            <span className="px-5 py-2 rounded-full text-base font-medium border border-[#D7E2EA]/30 text-[#D7E2EA]/80">Software Developer</span>
+            <span className="px-5 py-2 rounded-full text-base font-medium bg-cyan-500/20 border border-cyan-400/40 text-cyan-300">Research Enthusiast</span>
           </div>
         </FadeIn>
 

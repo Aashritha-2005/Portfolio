@@ -26,7 +26,7 @@ export function ExploreButton({ children, onClick, className = '' }: BtnProps) {
   return (
     <button
       onClick={onClick}
-      className={`relative px-8 py-3 rounded-full text-white font-semibold text-sm uppercase tracking-widest outline outline-2 outline-offset-[-3px] outline-white/20 transition-opacity hover:opacity-90 ${className}`}
+      className={`relative px-9 py-3.5 rounded-full text-white font-semibold text-base uppercase tracking-widest outline outline-2 outline-offset-[-3px] outline-white/20 transition-opacity hover:opacity-90 ${className}`}
       style={{ background: btnGradient, boxShadow: btnShadow }}
     >
       {children}
