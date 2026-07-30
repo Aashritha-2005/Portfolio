@@ -14,14 +14,14 @@ const baseCerts = [
     title: 'Generative AI Mastermind',
     issuer: 'Outskill',
     category: 'Certification',
-    description: null,
+    description: 'Mastered the full GenAI stack — prompt engineering, RAG pipelines, fine-tuning, and building production-ready AI applications.',
     link: 'https://drive.google.com/file/d/1AN4ZAzm7cLMHUnplJzlcWwP2d6TUQ04A/view?usp=sharing',
   },
   {
     title: 'Claude Code 101',
     issuer: 'Anthropic',
     category: 'Certification',
-    description: null,
+    description: 'Learnt to build and ship real software using Claude Code as an AI coding agent — from codebase navigation to autonomous multi-file edits.',
     link: 'https://drive.google.com/file/d/128GmZlY_KHpYnHh9Xc5XmUg1isJ0odDV/view?usp=sharing',
   },
   {
