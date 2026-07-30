@@ -24,7 +24,7 @@ const baseCerts = [
     category: 'Hackathon',
     description:
       'Participated in a 7-day online hackathon on AI context and memory (June 29 – July 5, 2026), sponsored by Cognee and presented by WeMakeDevs.',
-    link: null,
+    link: 'https://drive.google.com/file/d/1LjWjkZf-c2IJMdtdAyGDc9d2wKU_Trbp/view?usp=sharing',
   },
   {
     title: 'Summer of AI Internship',
