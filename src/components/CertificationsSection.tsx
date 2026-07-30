@@ -11,6 +11,20 @@ const GAP = 24
 
 const baseCerts = [
   {
+    title: 'Generative AI Mastermind',
+    issuer: 'Outskill',
+    category: 'Certification',
+    description: null,
+    link: 'https://drive.google.com/file/d/1AN4ZAzm7cLMHUnplJzlcWwP2d6TUQ04A/view?usp=sharing',
+  },
+  {
+    title: 'Claude Code 101',
+    issuer: 'Anthropic',
+    category: 'Certification',
+    description: null,
+    link: 'https://drive.google.com/file/d/128GmZlY_KHpYnHh9Xc5XmUg1isJ0odDV/view?usp=sharing',
+  },
+  {
     title: 'CS50x: Introduction to Computer Science',
     issuer: 'Harvard University',
     category: 'Certification',
@@ -130,7 +144,7 @@ export default function CertificationsSection() {
             {[...Array(5)].map((_, i) => (
               <Star key={i} size={20} fill="#1a4fd6" stroke="#1a4fd6" />
             ))}
-            <span className="text-sm font-medium text-gray-500 ml-1">Verified · 5 credentials</span>
+            <span className="text-sm font-medium text-gray-500 ml-1">Verified · 7 credentials</span>
           </div>
         </FadeIn>
       </div>
