@@ -44,14 +44,14 @@ const baseCerts = [
     title: 'Summer of AI Internship',
     issuer: 'VISWAM.AI & Swecha',
     category: 'Internship',
-    description: null,
+    description: 'Built and deployed AI projects under mentorship, exploring real-world applications of machine learning and open-source AI tools.',
     link: 'https://drive.google.com/file/d/11Yy7Wf39lSBlxMWpGtK5i5pGNKQM0nKz/view',
   },
   {
     title: 'TATA Cybersecurity Analyst Micro-Internship',
     issuer: 'Tata Consultancy Services',
     category: 'Internship',
-    description: null,
+    description: 'Simulated real-world cybersecurity analyst tasks — threat assessment, security frameworks, and defensive strategy across enterprise scenarios.',
     link: 'https://drive.google.com/file/d/1-ppAVTe2TRfSXTPxUVnTt15RqCOzcsHm/view',
   },
   {
