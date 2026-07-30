@@ -15,7 +15,7 @@ const baseCerts = [
     issuer: 'Harvard University',
     category: 'Certification',
     description:
-      'Completed Harvard\'s flagship CS course including ten problem sets and one final project, covering algorithms, data structures, C, Python, SQL, and web development.',
+      'Harvard\'s gold-standard CS course — from bare-metal C to full-stack web, built to think like a computer scientist.',
     link: 'https://cs50.harvard.edu/certificates/815b5999-9e9f-4c00-8a97-dbfd5353122a',
   },
   {
@@ -23,7 +23,7 @@ const baseCerts = [
     issuer: 'WeMakeDevs × Cognee',
     category: 'Hackathon',
     description:
-      'Participated in a 7-day online hackathon on AI context and memory (June 29 – July 5, 2026), sponsored by Cognee and presented by WeMakeDevs.',
+      'Competed in a Cognee-sponsored AI hackathon tackling one of the hardest open problems in agents — context and memory.',
     link: 'https://drive.google.com/file/d/1LjWjkZf-c2IJMdtdAyGDc9d2wKU_Trbp/view?usp=sharing',
   },
   {
