@@ -95,7 +95,7 @@ const projects: Project[] = [
   },
 ]
 
-function ProjectCard({ project, index, total }: { project: Project; index: number; total: number }) {
+function ProjectCard({ project, index }: { project: Project; index: number }) {
   const cardRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ target: cardRef, offset: ['start end', 'end start'] })
   const scale = useTransform(scrollYProgress, [0, 0.4, 1], [0.97, 1, 1])
