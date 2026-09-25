@@ -3,13 +3,20 @@ import { Award, Star, ChevronLeft, ChevronRight } from 'lucide-react'
 import FadeIn from './ui/FadeIn'
 import GradientDivider from './ui/GradientDivider'
 
-const btnGradient = 'linear-gradient(123deg, #0c1a4e 7%, #1a4fd6 37%, #0ea5e9 72%, #38bdf8 100%)'
-const btnShadow = 'inset 0 1px 0 rgba(255,255,255,0.15), 0 4px 24px rgba(26,79,214,0.3)'
+const btnGradient = 'linear-gradient(123deg, #1e0a3c 7%, #6d28d9 52%, #a78bfa 100%)'
+const btnShadow = 'inset 0 1px 0 rgba(255,255,255,0.14), 0 4px 24px rgba(139,92,246,0.32)'
 
-const CARD_WIDTH = 400
-const GAP = 24
+const CARD_WIDTH = 440
+const GAP = 28
 
 const baseCerts = [
+  {
+    title: 'CS50x: Introduction to Computer Science',
+    issuer: 'Harvard University',
+    category: 'Certification',
+    description: 'Harvard\'s gold-standard CS course — from bare-metal C to full-stack web, built to think like a computer scientist.',
+    link: 'https://cs50.harvard.edu/certificates/815b5999-9e9f-4c00-8a97-dbfd5353122a',
+  },
   {
     title: 'Generative AI Mastermind',
     issuer: 'Outskill',
@@ -18,27 +25,12 @@ const baseCerts = [
     link: 'https://drive.google.com/file/d/1AN4ZAzm7cLMHUnplJzlcWwP2d6TUQ04A/view?usp=sharing',
   },
   {
-    title: 'Claude Code 101',
-    issuer: 'Anthropic',
-    category: 'Certification',
-    description: 'Learnt to build and ship real software using Claude Code as an AI coding agent — from codebase navigation to autonomous multi-file edits.',
-    link: 'https://drive.google.com/file/d/128GmZlY_KHpYnHh9Xc5XmUg1isJ0odDV/view?usp=sharing',
-  },
-  {
-    title: 'CS50x: Introduction to Computer Science',
-    issuer: 'Harvard University',
+    title: 'Machine Learning Foundations (Python & scikit-learn)',
+    issuer: 'Coursera',
     category: 'Certification',
     description:
-      'Harvard\'s gold-standard CS course — from bare-metal C to full-stack web, built to think like a computer scientist.',
-    link: 'https://cs50.harvard.edu/certificates/815b5999-9e9f-4c00-8a97-dbfd5353122a',
-  },
-  {
-    title: 'The Hangover Hackathon — Part AI: Where\'s My Context?',
-    issuer: 'WeMakeDevs × Cognee',
-    category: 'Hackathon',
-    description:
-      'Competed in a Cognee-sponsored AI hackathon tackling one of the hardest open problems in agents — context and memory.',
-    link: 'https://drive.google.com/file/d/1LjWjkZf-c2IJMdtdAyGDc9d2wKU_Trbp/view?usp=sharing',
+      'Model training, validation, and evaluation using Python and scikit-learn, including classical ML algorithms, cross-validation, and performance metrics.',
+    link: 'https://drive.google.com/file/d/1fT8fvnN1j1xDVlW7eNf5h0ybeTP4qvAq/view',
   },
   {
     title: 'Summer of AI Internship',
@@ -55,12 +47,18 @@ const baseCerts = [
     link: 'https://drive.google.com/file/d/1-ppAVTe2TRfSXTPxUVnTt15RqCOzcsHm/view',
   },
   {
-    title: 'Machine Learning Foundations (Python & scikit-learn)',
-    issuer: 'Coursera',
+    title: 'Claude Code 101',
+    issuer: 'Anthropic',
     category: 'Certification',
-    description:
-      'Model training, validation, and evaluation using Python and scikit-learn, including classical ML algorithms, cross-validation, and performance metrics.',
-    link: 'https://drive.google.com/file/d/1fT8fvnN1j1xDVlW7eNf5h0ybeTP4qvAq/view',
+    description: 'Learnt to build and ship real software using Claude Code as an AI coding agent — from codebase navigation to autonomous multi-file edits.',
+    link: 'https://drive.google.com/file/d/128GmZlY_KHpYnHh9Xc5XmUg1isJ0odDV/view?usp=sharing',
+  },
+  {
+    title: 'The Hangover Hackathon — Part AI: Where\'s My Context?',
+    issuer: 'WeMakeDevs × Cognee',
+    category: 'Hackathon',
+    description: 'Competed in a Cognee-sponsored AI hackathon tackling one of the hardest open problems in agents — context and memory.',
+    link: 'https://drive.google.com/file/d/1LjWjkZf-c2IJMdtdAyGDc9d2wKU_Trbp/view?usp=sharing',
   },
 ]
 
@@ -126,10 +124,10 @@ export default function CertificationsSection() {
   return (
     <section
       id="certifications"
-      className="bg-[#F8FAFC] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 z-10 relative pt-20 pb-20 overflow-hidden"
+      className="atmospheric-section atmosphere-muted z-10 relative pt-6 pb-20"
     >
       {/* Heading row */}
-      <div className="max-w-5xl mx-auto px-5 sm:px-8 md:px-10 mb-12">
+      <div className="w-[84vw] max-w-[1320px] mx-auto px-5 sm:px-8 md:px-10 mb-12">
         <FadeIn delay={0} y={30}>
           <h2
             className="hero-heading font-black uppercase tracking-tight leading-none text-center"
@@ -142,34 +140,34 @@ export default function CertificationsSection() {
         <FadeIn delay={0.15} y={20}>
           <div className="flex items-center justify-center gap-2 mt-4">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} size={20} fill="#1a4fd6" stroke="#1a4fd6" />
+              <Star key={i} size={20} fill="#b36836" stroke="#b36836" />
             ))}
-            <span className="text-sm font-medium text-gray-500 ml-1">Verified · 7 credentials</span>
+            <span className="text-sm font-medium text-[#E8E3DC] ml-1">Verified · 7 credentials</span>
           </div>
         </FadeIn>
       </div>
 
       {/* Navigation row */}
-      <div className="max-w-[1248px] mx-auto px-5 sm:px-8 md:px-10 flex justify-end gap-3 mb-6">
+      <div className="w-[84vw] max-w-[1320px] mx-auto px-5 sm:px-8 md:px-10 flex justify-end gap-3 mb-6 relative z-20">
         <button
           onClick={goPrev}
-          className="w-12 h-12 rounded-full border border-gray-200 bg-white shadow-sm flex items-center justify-center cursor-pointer hover:border-[#1a4fd6]/40 hover:bg-[#f0f4ff] transition-all duration-200"
+          className="w-12 h-12 rounded-full bg-[#0a0807]/80 border border-[#F5F1EA]/35 shadow-[0_0_24px_rgba(245,241,234,0.08)] flex items-center justify-center cursor-pointer hover:border-[#F5F1EA]/70 hover:bg-[#211711]/85 transition-all duration-200"
           aria-label="Previous"
         >
-          <ChevronLeft size={20} className="text-gray-600" />
+          <ChevronLeft size={24} className="text-[#FFFFFF]" strokeWidth={2.4} />
         </button>
         <button
           onClick={goNext}
-          className="w-12 h-12 rounded-full border border-gray-200 bg-white shadow-sm flex items-center justify-center cursor-pointer hover:border-[#1a4fd6]/40 hover:bg-[#f0f4ff] transition-all duration-200"
+          className="w-12 h-12 rounded-full bg-[#0a0807]/80 border border-[#F5F1EA]/35 shadow-[0_0_24px_rgba(245,241,234,0.08)] flex items-center justify-center cursor-pointer hover:border-[#F5F1EA]/70 hover:bg-[#211711]/85 transition-all duration-200"
           aria-label="Next"
         >
-          <ChevronRight size={20} className="text-gray-600" />
+          <ChevronRight size={24} className="text-[#FFFFFF]" strokeWidth={2.4} />
         </button>
       </div>
 
       {/* Carousel */}
       <div
-        className="overflow-hidden max-w-[1248px] mx-auto px-5 sm:px-8 md:px-10"
+        className="overflow-hidden w-[84vw] max-w-[1320px] mx-auto px-5 sm:px-8 md:px-10"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -185,31 +183,31 @@ export default function CertificationsSection() {
           {certs.map((cert, i) => (
             <div
               key={i}
-              className="flex-shrink-0 bg-white rounded-[32px] md:rounded-[40px] shadow-[0_4px_24px_rgba(0,0,0,0.08)] border border-gray-100 px-8 py-10 flex flex-col gap-4"
+              className="flex-shrink-0 glass-panel rounded-[32px] md:rounded-[40px] px-8 py-10 flex flex-col gap-4"
               style={{ width: CARD_WIDTH }}
             >
               {/* Row 1 — icon + pill */}
               <div className="flex items-center justify-between">
-                <Award size={40} className="text-[#1a4fd6]" />
-                <span className="bg-[#f0f4ff] text-[#1a4fd6] border border-[#1a4fd6]/20 rounded-full px-4 py-1 text-xs font-semibold uppercase tracking-wide">
+                <Award size={40} className="text-[#d39a63]" />
+                <span className="warm-chip rounded-full px-4 py-1 text-xs font-semibold uppercase tracking-wide">
                   {cert.category}
                 </span>
               </div>
 
               {/* Row 2 — title */}
               <h3
-                className="font-bold text-[#0d1117] leading-snug"
+                className="font-bold text-[#F5F1EA] leading-snug"
                 style={{ fontSize: 'clamp(1.1rem, 2vw, 1.4rem)' }}
               >
                 {cert.title}
               </h3>
 
               {/* Row 3 — issuer */}
-              <p className="text-sm text-gray-500 font-medium">{cert.issuer}</p>
+              <p className="text-sm text-[#E8E3DC] font-medium">{cert.issuer}</p>
 
               {/* Row 4 — description (cert 3 only) */}
               {cert.description && (
-                <p className="text-sm text-gray-600 leading-relaxed">{cert.description}</p>
+                <p className="text-sm text-[#E8E3DC] leading-relaxed">{cert.description}</p>
               )}
 
               {/* Row 5 — button */}
@@ -225,7 +223,7 @@ export default function CertificationsSection() {
                     ↗ View Certificate
                   </a>
                 ) : (
-                  <span className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold uppercase tracking-widest border border-gray-200 text-gray-400 cursor-default">
+                  <span className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold uppercase tracking-widest border border-[#d39a63]/20 text-[#C8C0B6] cursor-default">
                     Certificate Issued
                   </span>
                 )}
@@ -237,7 +235,7 @@ export default function CertificationsSection() {
 
       {/* Closing aesthetic line */}
       <FadeIn delay={0.3}>
-        <p className="mt-16 text-center text-sm text-gray-400 tracking-widest uppercase">
+        <p className="mt-16 text-center text-sm text-[#C8C0B6] tracking-widest uppercase">
           Continuously learning · building · researching
         </p>
       </FadeIn>

@@ -8,7 +8,8 @@ const PORTRAIT_URL = 'https://i.postimg.cc/cLbNVKqP/Whats-App-Image-2025-11-06-a
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col justify-center px-6 md:px-16 pt-24 pb-16 bg-[#0C0C0C]">
+    <section id="hero" className="atmospheric-section atmosphere-hero relative min-h-screen flex flex-col justify-center px-6 md:px-16 pt-24 pb-16">
+      <div className="hero-system-bg" aria-hidden="true" />
       <div className="relative z-10 max-w-[70%]">
         <FadeIn delay={0.1} y={40}>
           <div>
@@ -25,19 +26,19 @@ export default function HeroSection() {
 
         <FadeIn delay={0.4} y={20}>
           <div className="flex flex-wrap gap-3 mt-6">
-            <span className="px-5 py-2 rounded-full text-base font-medium border border-[#D7E2EA]/30 text-[#D7E2EA]/80">AI/ML Developer</span>
-            <span className="px-5 py-2 rounded-full text-base font-medium border border-[#D7E2EA]/30 text-[#D7E2EA]/80">Data Scientist</span>
-            <span className="px-5 py-2 rounded-full text-base font-medium border border-[#D7E2EA]/30 text-[#D7E2EA]/80">Software Developer</span>
-            <span className="px-5 py-2 rounded-full text-base font-medium bg-cyan-500/20 border border-cyan-400/40 text-cyan-300">Research Enthusiast</span>
+            <span className="px-5 py-2 rounded-full text-base font-medium warm-chip backdrop-blur-md">Software Engineer</span>
+            <span className="px-5 py-2 rounded-full text-base font-medium warm-chip backdrop-blur-md">Full-Stack Developer</span>
+            <span className="px-5 py-2 rounded-full text-base font-medium warm-chip backdrop-blur-md">AI/ML Engineer</span>
+            <span className="px-5 py-2 rounded-full text-base font-medium border border-[#d39a63]/40 bg-[#d39a63]/15 text-[#F5F2ED] backdrop-blur-md">Research Enthusiast</span>
           </div>
         </FadeIn>
 
         <FadeIn delay={0.5} y={20}>
-          <p className="mt-4 text-[#6b7280] text-2xl max-w-md">
+          <p className="mt-4 text-[#E8E3DC] text-2xl max-w-md">
             Exploring intelligence through code, creativity, and curiosity.
           </p>
           <div className="mt-6">
-            <ExploreButton onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
+            <ExploreButton onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
               Explore My Work
             </ExploreButton>
           </div>
@@ -49,17 +50,17 @@ export default function HeroSection() {
         <Magnet>
           <div className="relative">
             <div
-              className="w-[180px] sm:w-[260px] md:w-[360px] lg:w-[420px] aspect-square rounded-full border-4 border-[#1a4fd6]/40 overflow-hidden"
+              className="w-[210px] sm:w-[300px] md:w-[400px] lg:w-[470px] aspect-square rounded-full border-4 border-[#b36836]/35 overflow-hidden"
               style={{
-                boxShadow: '0 0 60px rgba(26,79,214,0.35)',
+                boxShadow: '0 0 70px rgba(179,104,54,0.28)',
                 backgroundImage: `url(${PORTRAIT_URL})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                background: `url(${PORTRAIT_URL}) center/cover no-repeat, radial-gradient(circle, #1a4fd6 0%, #5b21b6 60%, #0C0C0C 100%)`,
+                background: `url(${PORTRAIT_URL}) center/cover no-repeat, radial-gradient(circle, #8f4f27 0%, #3b2118 60%, #070605 100%)`,
               }}
             >
             </div>
-            <div className="absolute -top-4 -right-4 bg-cyan-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg whitespace-nowrap">
+            <div className="absolute -top-4 -right-4 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg whitespace-nowrap" style={{ background: '#0ea5e9', boxShadow: '0 0 14px rgba(14,165,233,0.35)' }}>
               Available for hire
             </div>
           </div>
@@ -68,7 +69,7 @@ export default function HeroSection() {
 
       {/* Scroll arrow */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[#1a4fd6]"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[#c58f5e]"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 1.5, repeat: Infinity }}
       >

@@ -9,10 +9,12 @@ import ProjectsSection from './components/ProjectsSection'
 import PublicationsSection from './components/PublicationsSection'
 import CertificationsSection from './components/CertificationsSection'
 import ContactSection from './components/ContactSection'
+import GlobalBackground from './components/GlobalBackground'
 
 function App() {
   return (
     <div className="main-wrapper">
+      <GlobalBackground />
       <Navbar />
       <HeroSection />
       <MarqueeSection />

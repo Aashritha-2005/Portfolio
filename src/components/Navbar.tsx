@@ -18,36 +18,41 @@ export default function Navbar() {
 
   useEffect(() => {
     function onScroll() {
-      for (const [label, id] of Object.entries(sectionIds).reverse()) {
+      const sections = Object.entries(sectionIds)
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const [label, id] = sections[i]
         const el = document.getElementById(id)
-        if (el && window.scrollY >= el.offsetTop - 120) {
+        if (!el) continue
+        const rect = el.getBoundingClientRect()
+        if (rect.top <= window.innerHeight * 0.5) {
           setActive(label)
-          break
+          return
         }
       }
     }
     window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   return (
     <FadeIn y={-20} delay={0}>
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-10 py-4 bg-[#0C0C0C]/90 backdrop-blur-md border-b border-white/5">
-        <span className="text-[22px] font-black hero-heading">Aashritha</span>
-        <ul className="hidden md:flex items-center gap-6">
+      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-10 py-4 bg-[#080605]/75 backdrop-blur-xl border-b border-[#c58f5e]/10">
+        <span className="text-[34px] font-black hero-heading">Aashritha</span>
+        <ul className="hidden md:flex items-center gap-8">
           {links.map((link) => {
             const isActive = active === link
             return (
               <li key={link}>
                 <a
                   href={`#${sectionIds[link]}`}
-                  className="relative text-[16px] font-medium text-[#D7E2EA]/70 hover:text-[#D7E2EA] transition-colors pb-1"
+                  className="relative text-[22px] font-medium text-[#F5F1EA]/85 hover:text-[#F5F1EA] transition-colors pb-1"
                 >
                   {link}
                   {isActive && (
                     <span
                       className="absolute bottom-0 left-0 right-0 h-[2px] rounded-full"
-                      style={{ background: 'linear-gradient(90deg, #1a4fd6, #7dd3fc)' }}
+                      style={{ background: 'linear-gradient(90deg, #8f4f27, #d39a63)' }}
                     />
                   )}
                 </a>

@@ -4,103 +4,105 @@ import GradientDivider from './ui/GradientDivider'
 
 const skills = [
   {
-    icon: Cpu,
-    title: 'Computational & Analytical Foundations',
+    icon: Code2,
+    title: 'Full-Stack & Backend Engineering',
     items: [
-      { label: 'Algorithms & Data Structures', bullets: ['Dynamic programming, graph algorithms, sorting/searching', 'Complexity analysis, algorithm design'] },
-      { label: 'Linear Algebra & Calculus', bullets: ['Matrix operations, eigendecomposition, SVD', 'Gradient-based optimization, multivariate calculus'] },
-      { label: 'Probability & Statistics', bullets: ['Bayesian inference, frequentist methods', 'Statistical testing, distribution modeling'] },
-      { label: 'Signal Processing', bullets: ['Fourier transforms, wavelet analysis', 'Time-series analysis, spectral methods'] },
+      { label: 'Backend & APIs', bullets: ['Node.js, Express, FastAPI — REST API design', 'JWT auth, RBAC, request validation, middleware'] },
+      { label: 'Frontend', bullets: ['React, TypeScript — component-based UI', 'State management, REST API integration, responsive design'] },
+      { label: 'Databases', bullets: ['PostgreSQL, SQL, Prisma ORM', 'Schema design, migrations, query optimization'] },
+      { label: 'Testing & DevOps', bullets: ['Pytest, unit & integration testing, CI/CD', 'GitHub Actions, Docker, Railway, Linux'] },
     ],
   },
   {
     icon: Brain,
-    title: 'Intelligent Systems & Learning Methods',
+    title: 'AI Systems & Applied ML',
     items: [
-      { label: 'Deep Learning', bullets: ['CNNs, RNNs, Transformers, Vision Transformers', 'Training pipelines, transfer learning, fine-tuning'] },
-      { label: 'Reinforcement Learning', bullets: ['Policy gradient, Q-learning, actor-critic methods', 'Gymnasium environments, reward shaping'] },
-      { label: 'Federated Learning', bullets: ['Privacy-preserving distributed training', 'FedAvg, differential privacy, Flower framework'] },
-      { label: 'NLP & Multimodal AI', bullets: ['LLMs, RAG pipelines, embedding models', 'HuggingFace ecosystem, prompt engineering'] },
+      { label: 'LLMs & RAG', bullets: ['RAG pipelines, LangChain, LangGraph', 'ChromaDB, FAISS, prompt engineering, Groq'] },
+      { label: 'Deep Learning', bullets: ['PyTorch — CNNs, Transformers, fine-tuning', 'Training pipelines, transfer learning'] },
+      { label: 'AI Agents', bullets: ['Multi-agent workflows, memory layers', 'Semantic retrieval, trust scoring, embeddings'] },
+      { label: 'Federated & Distributed ML', bullets: ['Flower framework, FedAvg, differential privacy', 'Non-IID data, client-server coordination'] },
+    ],
+  },
+  {
+    icon: Cpu,
+    title: 'CS Foundations',
+    items: [
+      { label: 'Algorithms & Data Structures', bullets: ['Dynamic programming, graph algorithms', 'Complexity analysis, OOP design patterns'] },
+      { label: 'Systems', bullets: ['Operating Systems, Computer Networks', 'Computer Architecture, Database Systems'] },
+      { label: 'Mathematics', bullets: ['Linear algebra, probability, statistics', 'Gradient-based optimization, Bayesian inference'] },
+      { label: 'Languages', bullets: ['Python, TypeScript, JavaScript, Java, C', 'SQL, shell scripting'] },
     ],
   },
   {
     icon: FlaskConical,
-    title: 'Systems, Experimentation & Evaluation',
+    title: 'Data & Scalable Pipelines',
     items: [
-      { label: 'ML Evaluation', bullets: ['Cross-validation, ablation studies', 'Precision/recall, AUC-ROC, domain-specific metrics'] },
-      { label: 'Experimental Design', bullets: ['Hypothesis-driven experimentation', 'Reproducibility, benchmarking, result analysis'] },
-      { label: 'Physics-Informed ML', bullets: ['FEM simulation integration with neural networks', 'Zero-shot transfer learning for physical systems'] },
-      { label: 'AI Safety & RAG', bullets: ['Retrieval-augmented generation pipelines', 'LangGraph, adversarial robustness, safe deployment'] },
-    ],
-  },
-  {
-    icon: Code2,
-    title: 'Software Design & Development',
-    items: [
-      { label: 'Full-Stack Development', bullets: ['End-to-end apps with React, Node.js, FastAPI', 'Component-based UI, REST-connected backends'] },
-      { label: 'REST API Design', bullets: ['Resource-oriented API structure, status codes', 'Express, FastAPI, request validation, middleware'] },
-      { label: 'Database & Authentication', bullets: ['Schema design, Prisma ORM, PostgreSQL', 'JWT auth, role-based access control (RBAC)'] },
-      { label: 'Software Architecture & DevOps', bullets: ['Modular design, separation of concerns, OOP', 'Git workflows, debugging, reproducible builds'] },
+      { label: 'Large-Scale Processing', bullets: ['FAISS cosine similarity on 100K+ records', 'Batch processing, Sentence-Transformer embeddings'] },
+      { label: 'Optimal Transport', bullets: ['Sinkhorn algorithm for fine-grained matching', 'Rule-based scoring across disqualification signals'] },
+      { label: 'ML Evaluation', bullets: ['Cross-validation, ablation studies', 'Precision/recall, AUC-ROC, benchmarking'] },
+      { label: 'Physics-Informed ML', bullets: ['FEM simulation + neural network integration', 'Zero-shot transfer for structural systems'] },
     ],
   },
 ]
 
 const distributedCard = {
   icon: Network,
-  title: 'Distributed, Scalable & Robust Systems',
+  title: 'Production Engineering & Open-Source Experience',
   items: [
-    { label: 'Distributed Computing', bullets: ['Federated architectures, client-server coordination', 'Asynchronous training, fault tolerance'] },
-    { label: 'Scalable ML Pipelines', bullets: ['Batch processing, data loaders, memory efficiency', 'Model parallelism, mixed-precision training'] },
-    { label: 'Computer Vision Systems', bullets: ['Object detection, image classification, segmentation', 'Real-time inference, AR integration'] },
-    { label: 'Audio & Bio-Signal ML', bullets: ['Spectrogram analysis, Librosa, ResNet audio', 'Animal bioacoustics, species classification'] },
+    { label: 'CI/CD & Deployment', bullets: ['GitHub Actions pipelines, Ruff linting', 'Railway, Vercel, Docker-based deployments'] },
+    { label: 'Open-Source Contribution', bullets: ['Debugged fixes in 8-contributor Python/ML pipeline', 'Agile workflows, dependency integration, production stability'] },
+    { label: 'API Architecture', bullets: ['17-endpoint REST API shipped to production', 'Streaming endpoints, validation, error handling'] },
+    { label: 'Agile & Collaboration', bullets: ['Technical trade-off analysis, spec writing', 'Translating requirements into testable deliverables'] },
   ],
 }
 
 const toolingCols = [
-  { label: 'Languages', items: ['Python', 'C', 'Java', 'SQL'] },
-  { label: 'ML / Scientific', items: ['PyTorch', 'TensorFlow', 'HuggingFace', 'NumPy', 'SciPy', 'LangChain', 'ChromaDB', 'Matplotlib', 'Flower', 'Gymnasium', 'OpenCV', 'Librosa'] },
-  { label: 'Engineering Tools', items: ['MATLAB', 'Abaqus', 'ANSYS', 'AutoCAD', 'Git', 'LaTeX', 'Jupyter'] },
-  { label: 'Web & Backend', items: ['React', 'TypeScript', 'Next.js', 'FastAPI', 'Node.js', 'Express', 'PostgreSQL', 'Prisma', 'Vite', 'Tailwind CSS'] },
+  { label: 'Languages', items: ['Python', 'TypeScript', 'JavaScript', 'Java', 'C', 'SQL'] },
+  { label: 'Backend & APIs', items: ['Node.js', 'Express', 'FastAPI', 'REST APIs', 'JWT', 'Prisma', 'PostgreSQL'] },
+  { label: 'Frontend', items: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Next.js'] },
+  { label: 'AI / ML', items: ['PyTorch', 'HuggingFace', 'LangChain', 'LangGraph', 'ChromaDB', 'FAISS', 'Sentence Transformers', 'Flower', 'NumPy', 'SciPy'] },
+  { label: 'DevOps & Testing', items: ['GitHub Actions', 'Docker', 'Railway', 'Vercel', 'Pytest', 'CI/CD', 'Git', 'Linux'] },
+  { label: 'Tools', items: ['MATLAB', 'Abaqus', 'Jupyter', 'LaTeX'] },
 ]
 
 export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="bg-[#0C0C0C] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 py-24 px-6 md:px-16"
+      className="atmospheric-section atmosphere-lines py-24 px-6 md:px-16"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="w-[84vw] max-w-[1360px] mx-auto">
         <FadeIn>
-          <h2 className="text-center font-black text-white" style={{ fontSize: 'clamp(2.5rem, 6vw, 80px)' }}>
+          <h2 className="text-center font-black text-[#F5F1EA]" style={{ fontSize: 'clamp(2.5rem, 6vw, 80px)' }}>
             Technical <span className="hero-heading">Strengths</span>
           </h2>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <p className="text-center text-[#6b7280] mt-3 max-w-xl mx-auto">
-            A deep technical foundation spanning theory, systems, and applied AI.
+          <p className="text-center text-[#E8E3DC] mt-3 max-w-3xl mx-auto">
+            Full-stack engineering, backend systems, and AI — built, tested, and shipped.
           </p>
           <GradientDivider />
         </FadeIn>
 
-        <div className="mt-10 grid md:grid-cols-2 gap-6">
+        <div className="mt-14 grid md:grid-cols-2 gap-8 lg:gap-10">
           {skills.map((card, i) => {
             const Icon = card.icon
             return (
               <FadeIn key={card.title} delay={0.1 + i * 0.1}>
-                <div className="bg-[#111827] border border-[#1e2a3a] rounded-2xl p-6 h-full">
+                <div className="glass-panel-soft rounded-2xl p-6 h-full">
                   <div className="flex items-center gap-3 mb-5">
-                    <div className="p-2 rounded-lg bg-[#1a4fd6]/20">
-                      <Icon size={20} className="text-cyan-400" />
+                    <div className="p-2 rounded-lg bg-[#8f4f27]/25 border border-[#d39a63]/15">
+                      <Icon size={20} className="text-[#60a5fa]" />
                     </div>
-                    <h3 className="font-bold text-[#D7E2EA] text-sm">{card.title}</h3>
+                    <h3 className="font-bold text-[#F5F1EA] text-sm">{card.title}</h3>
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-5 lg:gap-7">
                     {card.items.map((item) => (
                       <div key={item.label}>
-                        <p className="text-cyan-400 text-[13px] font-semibold mb-1">{item.label}</p>
+                        <p className="text-[#d39a63] text-[13px] font-semibold mb-1">{item.label}</p>
                         <ul className="space-y-1">
                           {item.bullets.map((b) => (
-                            <li key={b} className="text-[#6b7280] text-base">• {b}</li>
+                            <li key={b} className="text-[#E8E3DC] text-base">• {b}</li>
                           ))}
                         </ul>
                       </div>
@@ -113,20 +115,20 @@ export default function SkillsSection() {
 
           {/* Distributed — full width */}
           <FadeIn delay={0.5} className="md:col-span-2">
-            <div className="bg-[#111827] border border-[#1e2a3a] rounded-2xl p-6 h-full">
+            <div className="glass-panel-soft rounded-2xl p-6 h-full">
               <div className="flex items-center gap-3 mb-5">
-                <div className="p-2 rounded-lg bg-[#1a4fd6]/20">
-                  <Network size={20} className="text-cyan-400" />
+                <div className="p-2 rounded-lg bg-[#8f4f27]/25 border border-[#d39a63]/15">
+                  <Network size={20} className="text-[#60a5fa]" />
                 </div>
-                <h3 className="font-bold text-[#D7E2EA] text-sm">{distributedCard.title}</h3>
+                <h3 className="font-bold text-[#F5F1EA] text-sm">{distributedCard.title}</h3>
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 lg:gap-8">
                 {distributedCard.items.map((item) => (
                   <div key={item.label}>
-                    <p className="text-cyan-400 text-[13px] font-semibold mb-1">{item.label}</p>
+                    <p className="text-[#d39a63] text-[13px] font-semibold mb-1">{item.label}</p>
                     <ul className="space-y-1">
                       {item.bullets.map((b) => (
-                        <li key={b} className="text-[#6b7280] text-base">• {b}</li>
+                        <li key={b} className="text-[#E8E3DC] text-base">• {b}</li>
                       ))}
                     </ul>
                   </div>
@@ -137,20 +139,20 @@ export default function SkillsSection() {
 
           {/* Tooling — full width */}
           <FadeIn delay={0.6} className="md:col-span-2">
-            <div className="bg-[#111827] border border-[#1e2a3a] rounded-2xl p-6">
+            <div className="glass-panel-soft rounded-2xl p-6">
               <div className="flex items-center gap-3 mb-5">
-                <div className="p-2 rounded-lg bg-[#1a4fd6]/20">
-                  <Wrench size={20} className="text-cyan-400" />
+                <div className="p-2 rounded-lg bg-[#8f4f27]/25 border border-[#d39a63]/15">
+                  <Wrench size={20} className="text-[#60a5fa]" />
                 </div>
-                <h3 className="font-bold text-[#D7E2EA] text-sm">Engineering & Research Tooling</h3>
+                <h3 className="font-bold text-[#F5F1EA] text-sm">Engineering & Research Tooling</h3>
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-9">
                 {toolingCols.map((col) => (
                   <div key={col.label}>
-                    <p className="text-cyan-400 text-xs font-semibold mb-2">{col.label}</p>
+                    <p className="text-[#d39a63] text-xs font-semibold mb-2">{col.label}</p>
                     <div className="flex flex-wrap gap-2">
                       {col.items.map((item) => (
-                        <span key={item} className="px-2 py-1 rounded text-xs bg-[#1e2a3a] text-[#D7E2EA]/70">
+                        <span key={item} className="px-2 py-1 rounded text-xs warm-chip">
                           {item}
                         </span>
                       ))}

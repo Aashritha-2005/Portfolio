@@ -24,7 +24,7 @@ const EMAILJS_SERVICE = 'service_tth6584'
 const EMAILJS_TEMPLATE = 'template_i3qju2f'
 const EMAILJS_PUBLIC_KEY = 'LEcuUM8jqUozgETHw'
 
-const btnGradient = 'linear-gradient(123deg, #0c1a4e 7%, #1a4fd6 37%, #0ea5e9 72%, #38bdf8 100%)'
+const btnGradient = 'linear-gradient(123deg, #0f172a 7%, #1d4ed8 52%, #3b82f6 100%)'
 
 export default function ContactSection() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
@@ -63,37 +63,37 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="bg-[#0C0C0C] rounded-t-[40px] -mt-10 py-24 px-6 md:px-16"
+      className="atmospheric-section atmosphere-settle py-40 px-6 md:px-16"
     >
-      <div className="max-w-5xl mx-auto">
+      <div className="w-[84vw] max-w-[1320px] mx-auto">
         <FadeIn>
-          <h2 className="text-center font-black text-white" style={{ fontSize: 'clamp(2.5rem, 6vw, 80px)' }}>
+          <h2 className="text-center font-black text-[#F5F1EA]" style={{ fontSize: 'clamp(2.5rem, 6vw, 80px)' }}>
             Get In <span className="hero-heading">Touch</span>
           </h2>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <p className="text-center text-[#6b7280] mt-3 max-w-xl mx-auto">
+          <p className="text-center text-[#E8E3DC] mt-3 max-w-3xl mx-auto">
             Open to internships, research collaborations, and interesting conversations.
           </p>
           <GradientDivider />
         </FadeIn>
 
-        <div className="mt-10 grid md:grid-cols-2 gap-8">
+        <div className="mt-14 grid md:grid-cols-2 gap-8 lg:gap-12">
           {/* Left */}
           <FadeIn delay={0.2}>
             <div>
-              <h3 className="text-xl font-bold text-[#D7E2EA] mb-6">Let's Connect</h3>
+              <h3 className="text-xl font-bold text-[#F5F1EA] mb-6">Let's Connect</h3>
               <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-3 text-[#D7E2EA]/80">
-                  <div className="p-2 rounded-lg bg-[#1a4fd6]/20"><Mail size={18} className="text-cyan-400" /></div>
+                <div className="flex items-center gap-3 text-[#F5F1EA]/85">
+                  <div className="p-2 rounded-lg bg-[#8f4f27]/25 border border-[#d39a63]/15"><Mail size={18} className="text-[#60a5fa]" /></div>
                   <span className="text-base">mallampatiaashritha29@gmail.com</span>
                 </div>
-                <div className="flex items-center gap-3 text-[#D7E2EA]/80">
-                  <div className="p-2 rounded-lg bg-[#1a4fd6]/20"><Phone size={18} className="text-cyan-400" /></div>
+                <div className="flex items-center gap-3 text-[#F5F1EA]/85">
+                  <div className="p-2 rounded-lg bg-[#8f4f27]/25 border border-[#d39a63]/15"><Phone size={18} className="text-[#60a5fa]" /></div>
                   <span className="text-base">+91 85550 77715</span>
                 </div>
-                <div className="flex items-center gap-3 text-[#D7E2EA]/80">
-                  <div className="p-2 rounded-lg bg-[#1a4fd6]/20"><MapPin size={18} className="text-cyan-400" /></div>
+                <div className="flex items-center gap-3 text-[#F5F1EA]/85">
+                  <div className="p-2 rounded-lg bg-[#8f4f27]/25 border border-[#d39a63]/15"><MapPin size={18} className="text-[#60a5fa]" /></div>
                   <span className="text-base">Hyderabad, India</span>
                 </div>
               </div>
@@ -105,56 +105,56 @@ export default function ContactSection() {
                   { icon: Phone, href: 'tel:+918555077715' },
                 ].map(({ icon: Icon, href }, i) => (
                   <a key={i} href={href} target="_blank" rel="noopener noreferrer"
-                    className="p-2.5 rounded-xl bg-[#111827] border border-[#1e2a3a] text-[#D7E2EA]/60 hover:text-cyan-400 hover:border-cyan-400/30 transition-colors">
+                    className="p-2.5 rounded-xl glass-panel-soft text-[#F5F1EA]/70 hover:text-[#60a5fa] hover:border-[#3b82f6]/30 transition-colors">
                     <Icon size={18} />
                   </a>
                 ))}
               </div>
-              <div className="bg-[#111827] border border-[#1e2a3a] rounded-2xl p-5">
+              <div className="glass-panel-soft rounded-2xl p-5">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                  <span className="text-sm font-semibold text-[#D7E2EA]">Available for full-time opportunities</span>
+                  <div className="w-2 h-2 rounded-full bg-[#4ade80] animate-pulse" style={{ boxShadow: '0 0 8px rgba(74,222,128,0.6)' }} />
+                  <span className="text-sm font-semibold text-[#F5F1EA]">Available for full-time opportunities</span>
                 </div>
-                <p className="text-xs text-[#6b7280]">Open to Software Engineering, ML Engineering, and Applied AI roles.</p>
+                <p className="text-xs text-[#E8E3DC]">Open to Software Engineering, ML Engineering, and Applied AI roles.</p>
               </div>
             </div>
           </FadeIn>
 
           {/* Right — form */}
           <FadeIn delay={0.3}>
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <h3 className="text-lg font-bold text-gray-800 mb-6">Send Message</h3>
+            <div className="glass-panel rounded-2xl p-8">
+              <h3 className="text-lg font-bold text-[#F5F1EA] mb-6">Send Message</h3>
               <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                  <label className="block text-sm font-medium text-[#F5F1EA] mb-1">Full Name</label>
                   <input
                     type="text"
                     required
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-[#e5e7eb] text-sm text-gray-800 focus:outline-none focus:border-[#1a4fd6] transition-colors"
+                    className="w-full px-4 py-2.5 rounded-xl border border-[#d39a63]/20 bg-[#0a0807]/65 text-sm text-[#F5F1EA] placeholder:text-[#C8C0B6] focus:outline-none focus:border-[#d39a63] transition-colors"
                     placeholder="Your name"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                  <label className="block text-sm font-medium text-[#F5F1EA] mb-1">Email Address</label>
                   <input
                     type="email"
                     required
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-[#e5e7eb] text-sm text-gray-800 focus:outline-none focus:border-[#1a4fd6] transition-colors"
+                    className="w-full px-4 py-2.5 rounded-xl border border-[#d39a63]/20 bg-[#0a0807]/65 text-sm text-[#F5F1EA] placeholder:text-[#C8C0B6] focus:outline-none focus:border-[#d39a63] transition-colors"
                     placeholder="your@email.com"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                  <label className="block text-sm font-medium text-[#F5F1EA] mb-1">Message</label>
                   <textarea
                     required
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     rows={4}
-                    className="w-full px-4 py-2.5 rounded-xl border border-[#e5e7eb] text-sm text-gray-800 focus:outline-none focus:border-[#1a4fd6] transition-colors resize-none"
+                    className="w-full px-4 py-2.5 rounded-xl border border-[#d39a63]/20 bg-[#0a0807]/65 text-sm text-[#F5F1EA] placeholder:text-[#C8C0B6] focus:outline-none focus:border-[#d39a63] transition-colors resize-none"
                     placeholder="Your message..."
                   />
                 </div>
@@ -171,7 +171,7 @@ export default function ContactSection() {
                     </>
                   ) : 'Send Message'}
                 </button>
-                <p className="text-xs text-center text-[#6b7280]">Typically responds within 24 hours</p>
+                <p className="text-xs text-center text-[#E8E3DC]">Typically responds within 24 hours</p>
                 {success && (
                   <p className="text-sm text-center text-green-600 font-medium">
                     Message sent! I'll reply within 24 hours.
@@ -189,9 +189,9 @@ export default function ContactSection() {
 
         {/* Footer */}
         <FadeIn delay={0.4}>
-          <div className="mt-16 pt-8 border-t border-[#1e2a3a] text-center space-y-1">
-            <p className="text-[15px] text-[#6b7280]">© 2025 Aashritha Lakshmi Mallampati. All rights reserved.</p>
-            <p className="text-[15px] text-[#6b7280]/60">Built with passion using React & TypeScript</p>
+          <div className="mt-16 pt-8 border-t border-[#d39a63]/10 text-center space-y-1">
+            <p className="text-[15px] text-[#E8E3DC]">© 2025 Aashritha Lakshmi Mallampati. All rights reserved.</p>
+            <p className="text-[15px] text-[#E8E3DC]/70">Built with passion using React & TypeScript</p>
           </div>
         </FadeIn>
       </div>

@@ -1,33 +1,28 @@
 import { useRef, useEffect, useState } from 'react'
 
-const gifs = [
-  // Row 1 (indices 0–10)
-  'https://motionsites.ai/assets/hero-stellar-ai-v2-preview-DjvxjG3C.gif',
-  'https://motionsites.ai/assets/hero-transform-data-preview-Cx5OU29N.gif',
-  'https://motionsites.ai/assets/hero-stellar-ai-preview-D3HL6bw1.gif',
-  'https://motionsites.ai/assets/hero-codenest-preview-Cgppc2qV.gif',
-  'https://motionsites.ai/assets/hero-aethera-preview-DknSlcTa.gif',
-  'https://motionsites.ai/assets/hero-nexora-preview-cx5HmUgo.gif',
-  'https://motionsites.ai/assets/hero-orbit-web3-preview-BXt4OttD.gif',
-  'https://motionsites.ai/assets/hero-space-voyage-preview-eECLH3Yc.gif',
-  'https://motionsites.ai/assets/hero-vex-ventures-preview-BczMFIiw.gif',
-  'https://motionsites.ai/assets/hero-designpro-preview-D8c5_een.gif',
-  'https://motionsites.ai/assets/hero-skyelite-preview-DHaZIgUv.gif',
-  // Row 2 (indices 11–20)
-  'https://motionsites.ai/assets/hero-terra-preview-BFjrCr7T.gif',
-  'https://motionsites.ai/assets/hero-planet-orbit-preview-DWAP8Z1P.gif',
-  'https://motionsites.ai/assets/hero-new-era-preview-CocuDUm9.gif',
-  'https://motionsites.ai/assets/hero-wealth-preview-B70idl_u.gif',
-  'https://motionsites.ai/assets/hero-luminex-preview-CxOP7ce6.gif',
-  'https://motionsites.ai/assets/hero-celestia-preview-0yO3jXO8.gif',
-  'https://motionsites.ai/assets/hero-evr-ventures-preview-DZxeVFEX.gif',
-  'https://motionsites.ai/assets/hero-asme-preview-B_nGDnTP.gif',
-  'https://motionsites.ai/assets/hero-vitara-preview-Cjz2QYyU.gif',
-  'https://motionsites.ai/assets/hero-xportfolio-preview-D4A8maiC.gif',
+const concepts = [
+  { label: 'embeddings', type: 'vector search', title: 'ChromaDB results', lines: ['query: video transcript', 'bge-small-en-v1.5', 'top_k: 05  score: .91'] },
+  { label: 'agents', type: 'terminal', title: 'SessionZERO memory hook', lines: ['trust=HIGH  inject context', 'contradiction penalty: .71', 'bridge: active'] },
+  { label: 'federated', type: 'training log', title: 'Flower FL rounds', lines: ['round 08/20  clients=12', 'fedavg loss: 0.184', 'privacy budget eps=8'] },
+  { label: 'retrieval', type: 'rag result', title: 'RAG Video Analytics', lines: ['retrieved chunks: 04', 'citation: transcript:12:44', 'engagement delta: +18%'] },
+  { label: 'vision', type: 'inference', title: 'PlantVerse CV', lines: ['class: leaf blight', 'confidence: 0.94', 'bbox: [42,18,320,266]'] },
+  { label: 'signals', type: 'spectrogram', title: 'Signal features', lines: ['fft bins: 1024', 'dominant freq: 2.8kHz', 'window: hann'] },
+  { label: 'systems', type: 'dashboard', title: 'TaskFlow dashboard', lines: ['projects: 12  overdue: 03', 'rbac: admin/member', 'api latency: 82ms'] },
+  { label: 'evaluation', type: 'chart', title: 'RLBenchKit metrics', lines: ['ppo reward ↑', 'a2c baseline', 'seed: 42  env: CartPole'] },
 ]
 
-const row1 = [...gifs.slice(0, 11), ...gifs.slice(0, 11), ...gifs.slice(0, 11)]
-const row2 = [...gifs.slice(11), ...gifs.slice(11), ...gifs.slice(11)]
+const row2 = [
+  { label: 'graphs', type: 'knowledge graph', title: 'SessionZERO graph', lines: ['nodes: decisions', 'edges: supersedes', 'path length: 03'] },
+  { label: 'memory', type: 'records', title: 'Memory recall', lines: ['record: deployment choice', 'trust: MEDIUM', 'last_seen: session-18'] },
+  { label: 'pipelines', type: 'pipeline', title: 'RAG/ML pipeline', lines: ['ingest → embed → retrieve', 'rerank → answer', 'trace id: rag_42'] },
+  { label: 'models', type: 'model run', title: 'Model training', lines: ['epoch 14  val_auc=.982', 'lr=2e-4  bs=32', 'checkpoint saved'] },
+  { label: 'safety', type: 'eval', title: 'Safety classifier', lines: ['harmful: 0.03', 'safe: 0.97', 'threshold: calibrated'] },
+  { label: 'research', type: 'research', title: 'Neural Twin FEM', lines: ['damage loc: 94%', 'zero-shot geometry', 'mode shape: stable'] },
+  { label: 'apis', type: 'swagger', title: 'FastAPI endpoint', lines: ['POST /analyze', '200 OK  application/json', 'schema: VideoCompare'] },
+  { label: 'inference', type: 'prediction', title: 'Inference trace', lines: ['input → encoder → head', 'prediction: positive', 'confidence: 0.88'] },
+]
+
+const rows = [[...concepts, ...concepts, ...concepts], [...row2, ...row2, ...row2]]
 
 export default function MarqueeSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -47,40 +42,42 @@ export default function MarqueeSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="bg-[#0C0C0C] py-12 overflow-hidden">
-      <div className="flex flex-col gap-3">
-        {/* Row 1 — moves right */}
-        <div
-          className="flex gap-3"
-          style={{ transform: `translateX(${offset - 200}px)`, willChange: 'transform' }}
-        >
-          {row1.map((url, i) => (
-            <img
-              key={i}
-              src={url}
-              loading="lazy"
-              className="rounded-2xl object-cover flex-shrink-0"
-              style={{ width: 420, height: 270 }}
-              alt=""
-            />
-          ))}
-        </div>
-        {/* Row 2 — moves left */}
-        <div
-          className="flex gap-3"
-          style={{ transform: `translateX(${-(offset - 200)}px)`, willChange: 'transform' }}
-        >
-          {row2.map((url, i) => (
-            <img
-              key={i}
-              src={url}
-              loading="lazy"
-              className="rounded-2xl object-cover flex-shrink-0"
-              style={{ width: 420, height: 270 }}
-              alt=""
-            />
-          ))}
-        </div>
+    <section ref={sectionRef} className="atmospheric-section atmosphere-lines py-28 overflow-hidden">
+      <div className="flex flex-col gap-5">
+        {rows.map((row, rowIndex) => (
+          <div
+            key={rowIndex}
+            className="flex gap-3"
+            style={{ transform: `translateX(${rowIndex === 0 ? offset - 200 : -(offset - 200)}px)`, willChange: 'transform' }}
+          >
+            {row.map((item, i) => (
+              <div
+                key={`${item.label}-${i}`}
+                className={`data-tile data-tile--${item.label} flex-shrink-0`}
+                style={{ width: 580, height: 340 }}
+              >
+                <div className="data-tile__visual artifact-screen">
+                  <div className="artifact-screen__bar">
+                    <span />
+                    <span />
+                    <span />
+                    <strong>{item.type}</strong>
+                  </div>
+                  <div className="artifact-screen__body">
+                    <p>{item.title}</p>
+                    <div className={`artifact-screen__viz artifact-screen__viz--${item.label}`} />
+                    <ul>
+                      {item.lines.map((line) => (
+                        <li key={line}>{line}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                <span>{item.label}</span>
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
     </section>
   )
