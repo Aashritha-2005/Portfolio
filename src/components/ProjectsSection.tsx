@@ -184,7 +184,7 @@ export default function ProjectsSection() {
 
         <div className="mt-16 flex flex-col">
           {projects.map((project, i) => (
-            <ProjectCard key={project.title} project={project} index={i} total={projects.length} />
+            <ProjectCard key={project.title} project={project} index={i} />
           ))}
         </div>
       </div>
